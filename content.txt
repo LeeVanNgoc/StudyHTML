@@ -1,0 +1,94 @@
+1. Tag
+2. Các tag thông dụng
+-	h1 -h6: tiêu đề
+-	p : đoạn văn
+-	img : hình ảnh
+-	a  : thẻ neo liên kết (link)
+-	ul, li : danh sách
+-	table : bảng
+-	tr 	  : table route L: dòng của bảng
+-	input : text, checkbox, radio
+-	botton :nút
+-	div : khối
+3. Attribute : thuộc tính
+4. CSS in HTML
+-	Internal
+-   External
+-   Inline
+5. ID and class (CSS selector)
+-   #ID{}
+- 	.class{}
+6. CSS selector cơ bản
+7. Độ ưu tiên trong CSS
+-	Internal, External
+-	Inline
+-	#ID
+-	.class
+-	tag
+-	Equal specificity
+-	Universak selector and inherited
+8. Sử dụng biến trong CSS (CSS variable)
+9. Các đơn vị trong CSS (CSS units)
+-	Absolute units: px, pt, cm, mm, inch, pc
+-	Relative units: %, rem, em, vw, vh
+10. CSS function
+-	var()
+-	linear-gradient()
+-	rgba()
+-	rgb()
+-	calc()
+-	attr()
+11. Pseudo class CSS (Lớp giả)
+-	:root
+-	:hover
+-	:active
+-	:fisrt-child
+-	:last-child
+12. Pseudo-element CSS
+-	::before
+-	::after
+-	::fisrt-letter
+-	::fisrt-line
+-	::selection
+13. Padding Attribute (đệm)
+14. Border Attribute (Viền)
+15. Margin Attribute (Khoảng cách lề)
+16. Box-sizing Attribute 
+17. Background-image Attribute 
+18. Background-size and cover, contain
+19. Background-origin
+20. Background-position
+21. Background-shorthand
+22. CSS Color
+-	rgb(red, green, blue)
+-	rgb(red, green, blue / alpha)
+23. CSS position
+-	Relative : Vị trí tương đối
+-	Absolute : Vị trí tuyệt đối
+-	Fixed	 : Vị trí tuyệt đối (phụ thuộc trình duyệt)
+-	Sticky 	 : Bám dính (Khuyến cáo hạn chế sử dụng)
+24. Dự án CSS Template Band 
+24.1 Phân tích
+-	Phân biệt
+-	Gọi tên các thành phần:
+	-	Header
+	-	Navigation
+	-	Breadcrumb
+	-	Sidebar
+	-	Slider
+	-	Content
+	-	Footer
+-	Phân tích dự án
+	-	Header
+		-	Navigation: Home, Band, Tour, Contact, More (Merchandise, Extras, Media), Search
+	-	Slider
+	-	Content:
+		-	About
+		-	Tour
+		-	Contact
+		-	Image
+	-	Footer
+		-	Logo
+- 	Tạo Project base
+
+
