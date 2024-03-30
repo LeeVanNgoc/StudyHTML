@@ -83,7 +83,7 @@
 								<h3 class="place-heading">New York</h3>
 								<p class="place-time">Fri 27 Nov 2016</p>
 								<p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-								<a href="#" class="place-buy-btn">Buy Tickets</a>
+								<button class="place-buy-btn js-buy-ticketBuy">Tickets</button>
 							</div>
 						</div>
 						<div class="place-item">
@@ -92,7 +92,7 @@
 								<h3 class="place-heading">Paris</h3>
 								<p class="place-time">Sat 28 Nov 2016</p>
 								<p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-								<a href="#" class="place-buy-btn">Buy Tickets</a>
+								<button class="place-buy-btn js-buy-ticket">Buy Tickets</button ">
 							</div>
 						</div>
 						<div class="place-item">
@@ -101,12 +101,47 @@
 								<h3 class="place-heading">San Francisco</h3>
 								<p class="place-time">Sun 29 Nov 2016</p>
 								<p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-								<a href="#" class="place-buy-btn">Buy Tickets</a>
+								<button class="place-buy-btn js-buy-ticket">Buy Tickets</button ">
 							</div>
 						</div>
 						<div class="clear"></div>
 					</div>
 					<!-- End place ticked -->
+					<!-- Start modal tickets -->
+					<div class="modal js-modal">
+						<div class="modal-container js-modal-container">	
+							<div class="modal-close js-modal-close">
+								<i class="ti-close"></i>
+							</div>
+							<header class="modal-header">
+								<i class="modal-heading-icon ti-bag">Tickets</i>
+							</header>
+				
+							<div class="modal-body">
+								<label for="ticket-quantity" class="modal-label">
+									<i class="ti-shopping-cart"></i>
+									Tickets, $15 per person
+								</label>
+								<input id="ticket-quantity" type="text" class="modal-input" placeholder="How many?">
+				
+								<label for="ticket-email" class="modal-label">
+									<i class="ti-user"></i>
+									Send to
+								</label>
+								<input id="ticket-email" type="email" class="modal-input" placeholder="Enter email">
+				
+								<button id="buy-tickets">
+									Pay <i class="ti-check"></i>
+								</button>
+				
+							</div>
+				
+							<footer class="modal-footer">
+								<p class="modal-help">Need <a href="">help?</a></p>
+							</footer>
+						</div>
+					</div>
+					<!-- End Modal tickets -->
 				</div>
 			</div>
 			<!-- End Content Tour -->
@@ -115,14 +150,43 @@
 				<h2 class="section-heading">CONTACT</h2>
 				<p class="section-sub-heading">Fan? Drop a note!</p>
 
+
 			</div>
 			<!-- End Content Contact -->
 			
 		</div>
 		<!-- End Content -->
 		<div id="footer">
-
 		</div>
 	</div>
+
+		
+
+	<script>
+		const buyBtns = document.querySelectorAll('.js-buy-ticket');
+		const modalContainer = document.querySelector('.js-modal-container');
+		const modal = document.querySelector('.js-modal');
+		const modalClose = document.querySelector('.js-modal-close');
+
+		function showBuyTicketModal() {
+			modal.classList.add('open');
+		}
+
+		function hideBuyTicketModal() {
+			modal.classList.remove('open');
+		}
+
+		for (const buyBtn of buyBtns) {
+			buyBtn.addEventListener('click', showBuyTicketModal); // click to show the buy tickets modal
+		}
+
+		modalClose.addEventListener('click', hideBuyTicketModal); // click to hide the buy tickets modal
+
+		modal.addEventListener('click', hideBuyTicketModal); // click in modal background to hide the buy tickets
+
+		modalContainer.addEventListener('click', function(event) {
+			event.stopPropagation();
+		});
+    </script>
 </body>
 </html>
