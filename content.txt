@@ -90,5 +90,7 @@
 	-	Footer
 		-	Logo
 - 	Tạo Project base
-
-
+25. Reponsive
+-	Reponsive : 
+26. Media query
+-	
