@@ -6,6 +6,7 @@
 	<title>Template Band</title>
 	<link rel="icon" href="./assets/img/favicon/rockandroll.jpg" type="image/x-icon" />
 	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="./assets/css/reponsive.css">
 	<link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
 </head>
 <body>
@@ -23,12 +24,17 @@
 						<i class="nav-arrow-down ti-angle-down"></i>
 					</a>
 					<ul class="subnav">
-						<li><a href="">Merchandise</a></li>
-						<li><a href="">Extras</a></li>
-						<li><a href="">Media</a></li>
+						<li><a href="#">Merchandise</a></li>
+						<li><a href="#">Extras</a></li>
+						<li><a href="#">Media</a></li>
 					</ul>
 				</li>
 			</ul>
+			<!-- Mobile menu -->
+			<div id="mobile-menu" class="mobile-menu-btn">
+				<i class="menu-icon ti-menu"></i>
+			</div>
+
 			<div class="search-btn">
 				<i class="search-icon ti-search"></i>
 			</div>
@@ -227,5 +233,37 @@
 			event.stopPropagation();
 		});
     </script>
+
+	
+	<script>
+		// Đóng/mở mobile menu
+		var header = document.getElementById('header');
+		var mobileMenu = document.getElementById('mobile-menu');
+		var headerHigth = header.clientHeight;
+		mobileMenu.onclick = function() {
+			var isClose = header.clientHeight === headerHigth;
+			if (isClose) {
+				header.style.height = 'auto';
+			} else {
+				header.style.height = null;
+			}
+		}	
+
+		// Tự động đóng khi chọn menu
+		var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
+		for (var i = 0; i < menuItems.length; i++) {
+			var menuItem = menuItems[i];
+			
+
+			menuItem.onclick = function() {
+				var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+				if (isParentMenu) {
+					event.preventDefault();
+				} else {
+					header.style.height = null;
+				}
+			}
+		}
+	</script>
 </body>
 </html>
