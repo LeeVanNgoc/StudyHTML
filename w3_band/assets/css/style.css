@@ -70,6 +70,10 @@ html {
     margin-top: 16px !important;
 }
 
+.mt-32 {
+	margin-top: 32 !important;
+}
+
 .col-full {
 	width: 100%;
 }
