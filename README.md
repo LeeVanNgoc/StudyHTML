@@ -1,4 +1,4 @@
-# StudyHTML with F8
+# Study HTML and CSS
 Thực hành sử dụng HTML, CSS và JS để tạo một Template giới thiệu ban nhạc
 Nội dung:
 -  Thực hành viết HTML
